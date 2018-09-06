@@ -22,6 +22,13 @@ export default class MyApp extends App {
           <title>London Orca 2018 Tournament</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
           <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400,500" rel="stylesheet" />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-4043907-5"></script>
+          <script>{`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-4043907-5');
+          `}</script>
         </Head>
         <style>{`
           html {
