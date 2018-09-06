@@ -97,6 +97,16 @@ const Button = styled.a`
   }
 `;
 
+const Banner = styled.div`
+  width: 100%;
+  margin: 1em 0 0 0;
+  padding: 1em 2em;
+  background: #D1345B;
+  color: white;
+  border-radius: 3px;
+  text-align: center;
+`;
+
 const H1 = styled.h1`
   margin: 0;
   font-size: 2.6em;
@@ -159,6 +169,11 @@ export default () =>
         <img className='polo' src='/static/water-polo.jpg' />
       </Teasers>
     </Columns>
+
+    <Banner>
+      Register by 30th September to be eligible for hosted housing. Any registrations after this date will
+      not be able to apply for hosted housing.
+    </Banner>
 
     <Welcome>
       <H2>We're back!</H2>
