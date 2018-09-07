@@ -12,7 +12,8 @@ const Page = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding: 0 2rem;
+  margin-bottom: 8em;
+  padding: 0 2em;
   width: 100%;
   max-width: 1120px;
   font-size: .875rem;
@@ -42,7 +43,7 @@ const Columns = styled.div`
   }
 `;
 
-const Masthead = styled.div`
+const Column = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,10 +70,14 @@ const Teasers = styled.div`
 
 const Welcome = styled.section`
   border-radius: 3px;
-  padding: 1rem 4rem;
-  margin: 2rem 0;
+  padding: 1em 2em;
+  margin: 2em 0;
   background-color: #EFEFEF;
   text-align: center;
+
+  @media ${device.tablet} {
+    padding: 1em 6em;
+  }
 
   p { font-size: 1.2em; }
 `;
@@ -82,7 +87,7 @@ const Button = styled.a`
   margin: 1em 0;
   padding: .8em 1.2em;
   font-size: 1.1em;
-  font-weight: 300;
+  font-weight: 400;
   color: white;
   background: #3454D1;
   border-radius: 3px;
@@ -131,10 +136,10 @@ const H2 = styled.h2`
 
   ::after {
     content: "";
-    background-color: #D1345B;
+    background-color: ${props => props.green ? '#34D1BF' : '#D1345B'};
     left: 0;
     position: absolute;
-    bottom: 8px;
+    bottom: 0.2em;
     height: 0.2em;
     width: 100%;
     z-index: -1;
@@ -147,6 +152,68 @@ const H3 = styled.h3`
   font-weight: 400;
   color: #D1345B;
 `;
+
+const H4 = styled.h3`
+  margin: .5em 0;
+  font-size: 1em;
+  font-weight: 600;
+  color: #070707;
+`;
+
+const WhatsOn = styled(Columns)`
+  margin-top: 1.6em;
+  justify-content: space-between;
+`;
+
+const Card = styled.section`
+  flex: 0 0 48%;
+  margin-bottom: 2em;
+
+  ul {
+    margin: .2em 0;
+    padding: 0 1em 0 0;
+    list-style: none;
+  }
+
+  li {
+    font-size: 1.4em;
+    padding: .2em 0 .2em 20px;
+
+    ::before {
+      display: inline-block;
+      width: 20px;
+      margin-left: -20px;
+      content: '▶︎';
+      font-size: 1em;
+      padding: 0;
+      color: ${props => props.matches ? '#3454D1' : '#D1345B'};
+    }
+  }
+`;
+
+const CardMask = styled.div`
+  display: flex;
+  width: 100%;
+  height: 320px;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 10px 10px 0 ${props => props.red ? '#D1345B' : '#3454D1'};
+`;
+
+const CardPhoto = styled.div`
+  flex: 1 1 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(${props => props.src});
+`;
+
+const CardTitle = styled.h3`
+  font-size: 2.2em;
+  margin: 0;
+  color: ${props => props.red ? '#D1345B' : '#3454D1'};
+`
 
 export default () =>
   <Page>
@@ -171,7 +238,7 @@ export default () =>
     </Header>
 
     <Columns>
-      <Masthead>
+      <Column>
         <H1>
           The London 2018 Champagne Water Polo Tournament
         </H1>
@@ -184,7 +251,7 @@ export default () =>
         <Link prefetch href='/register'>
           <Button>Register Now</Button>
         </Link>
-      </Masthead>
+      </Column>
       <Teasers>
         <img className='polo' src='/static/water-polo.jpg' />
       </Teasers>
@@ -199,9 +266,41 @@ export default () =>
       <H2>We're back!</H2>
       <p>
         We are closing off an incredible year of water polo with a final tournament in London. We
-        will be returing to the Crystal Palace National Sports centre almost exactly three years since
-        our last tournament.
+        are returning to the Crystal Palace National Sports centre, almost exactly three years since
+        our last tournament. You can expect an intense day of matches followed by a private party,
+        with performances, going on until the early hours of Sunday morning.
       </p>
     </Welcome>
+
+    <div>
+      <H2 green>What's On</H2>
+      <WhatsOn>
+        <Card matches>
+          <CardMask>
+            <CardPhoto src='/static/crystal-palace.jpg' />
+          </CardMask>
+          <H4>9AM - 6PM, CRYSTAL PALACE SPORTS CENTRE</H4>
+          <CardTitle>The Matches</CardTitle>
+          <ul>
+            <li>Full day of matches across three pools</li>
+            <li>One division (no competitive or rec split)</li>
+            <li>Light breakfast & full lunch provided</li>
+          </ul>
+        </Card>
+        <Card party>
+          <CardMask red>
+            <CardPhoto src='/static/party.jpg' />
+
+          </CardMask>
+          <H4>8PM - 3AM, EAST LONDON (VENUE TBC)</H4>
+          <CardTitle red>The Party!</CardTitle>
+          <ul>
+            <li>Food and a free drink included!</li>
+            <li>Awards presentation & performances</li>
+            <li>Costumes encouraged (theme to be announced soon!)</li>
+          </ul>
+        </Card>
+      </WhatsOn>
+    </div>
 
   </Page>
