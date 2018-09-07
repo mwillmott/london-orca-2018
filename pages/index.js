@@ -109,9 +109,9 @@ const Banner = styled.div`
 `;
 
 const H1 = styled.h1`
-  margin: 0;
-  font-size: 2.6em;
-  font-family: 'Roboto Slab', serif;
+  margin: 0 0 .2em 0;
+  font-size: 2.4em;
+  font-weight: 700;
 
   @media ${device.tablet} {
     font-size: 3.2em;
@@ -124,7 +124,6 @@ const H2 = styled.h2`
   font-size: 2.2em;
   margin: 0;
   z-index: 2;
-  font-family: 'Roboto Slab', serif;
 
   @media ${device.tablet} {
     font-size: 2.8em;
@@ -143,8 +142,9 @@ const H2 = styled.h2`
 `;
 
 const H3 = styled.h3`
-  margin: .5em 0;
+  margin: 0;
   font-size: 1.4em;
+  font-weight: 400;
   color: #D1345B;
 `;
 
@@ -177,6 +177,9 @@ export default () =>
         </H1>
         <H3>
           Crystal Palace, 3rd November 2018
+        </H3>
+        <H3>
+          £65 (Tournament + Party)
         </H3>
         <Link prefetch href='/register'>
           <Button>Register Now</Button>

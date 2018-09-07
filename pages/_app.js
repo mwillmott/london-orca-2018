@@ -21,7 +21,7 @@ export default class MyApp extends App {
         <Head>
           <title>London Orca 2018 Tournament</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
-          <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400,500" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,600,700" rel="stylesheet" />
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-4043907-5"></script>
           <script>{`
             window.dataLayer = window.dataLayer || [];
@@ -44,9 +44,8 @@ export default class MyApp extends App {
           body {
             padding: 0;
             margin: 0;
-            color: #070707;
-            font-family: 'Roboto Slab', serif;
-            font-family: 'Roboto', sans-serif;
+            color: #011627;
+            font-family: 'Libre Franklin', sans-serif;
           }
         `}</style>
         <Component {...pageProps} />
