@@ -179,7 +179,7 @@ export default () =>
       <H2>We're back!</H2>
       <p>
         We are closing off an incredible year of water polo with a final tournament in London. We
-        will be returing to the Crystal Palace National Sports centre been exactly three years since
+        will be returing to the Crystal Palace National Sports centre almost exactly three years since
         our last tournament.
       </p>
     </Welcome>
