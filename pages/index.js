@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
+import Head from 'next/head';
 
 export const device = {
   mobile: `(min-width: 425px)`,
@@ -149,6 +150,22 @@ const H3 = styled.h3`
 
 export default () =>
   <Page>
+    <Head>
+      <meta charSet="utf-8" />
+      <title>London Orca Tournament - 3rd Nov 2018</title>
+      <meta name="description" content="Registrations are open for the London Orca tournament on 3rd November 2018." />
+      <meta name="image" content="https://orca2018.com/static/logo.png" />
+      <meta itemProp="name" content="London Orca Tournament - 3rd Nov 2018" />
+      <meta itemProp="description" content="Registrations are open for the London Orca tournament on 3rd November 2018." />
+      <meta itemProp="image" content="https://orca2018.com/static/logo.png" />
+      <meta name="og:title" content="London Orca Tournament - 3rd Nov 2018" />
+      <meta name="og:description" content="Registrations are open for the London Orca tournament on 3rd November 2018." />
+      <meta name="og:image" content="https://orca2018.com/static/logo.png" />
+      <meta name="og:url" content="https://orca2018.com" />
+      <meta name="og:site_name" content="London Orca Tournament - 3rd Nov 2018" />
+      <meta name="og:locale" content="en_GB" />
+      <meta name="og:type" content="website" />
+    </Head>
     <Header>
       <img src='/static/logo.png' />
     </Header>
