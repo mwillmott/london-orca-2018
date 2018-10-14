@@ -1,5 +1,16 @@
+import Head from 'next/head';
+
 export default () => (
   <div>
+    <Head>
+      <meta charSet="utf-8" />
+      <title>Guest Party Tickets - 3rd Nov 2018</title>
+      <meta name="description" content="Registrations are open for the London Orca tournament on 3rd November 2018." />
+      <meta name="image" content="https://orca2018.com/static/logo.png" />
+      <meta itemProp="name" content="Guest Party Tickets - 3rd Nov 2018" />
+      <meta itemProp="description" content="Purchase additional tickets for the London Tournament Party on 3rd November 2018." />
+      <meta itemProp="image" content="https://orca2018.com/static/logo.png" />
+    </Head>
     <style jsx>{`
       iframe {
         position: absolute;
