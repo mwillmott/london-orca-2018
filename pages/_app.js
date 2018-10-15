@@ -19,8 +19,6 @@ export default class MyApp extends App {
     return (
       <Container>
         <Head>
-          <title>London Orca 2018 Tournament</title>
-          <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
           <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,600,700" rel="stylesheet" />
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-4043907-5"></script>
           <script>{`
