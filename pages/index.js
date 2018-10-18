@@ -140,7 +140,7 @@ export default () =>
         </Card>
         <Card
           photo='/static/party.jpg'
-          subtitle='8PM - 3AM, EAST LONDON (VENUE TBC)'
+          subtitle='8PM - 3AM, SAVAGE (EAST LONDON)'
           title='The Party!'
         >
           <List>
