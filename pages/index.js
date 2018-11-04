@@ -86,6 +86,36 @@ const List = styled.ul`
   }
 `;
 
+const Sponsor = styled.div`
+  background: #28282d;
+  color: white;
+  border-radius: 3px;
+  font-size: 1.1em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  @media ${device.tablet} {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  a {
+    display: block;
+    padding: 0 10px;
+    background: white;
+    text-align: center;
+  }
+
+  img {
+    display: inline-block;
+  }
+
+  div {
+    padding: 1em;
+  }
+`;
+
 export default () =>
   <Layout>
     <Columns>
@@ -151,4 +181,14 @@ export default () =>
         </Card>
       </WhatsOn>
     </div>
+
+    <Sponsor>
+      <a href="http://www.finsbury.com" target='_blank'>
+        <img src='/static/finsbury.png' />
+      </a>
+      <div>
+        A huge thanks to the support provided by Finsbury, a global leader in strategic communications. Their commitment to supporting
+        the communities they touch makes it possible for our community to come together during this event.
+      </div>
+    </Sponsor>
   </Layout>
