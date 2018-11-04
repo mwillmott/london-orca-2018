@@ -138,11 +138,6 @@ export default () =>
       </Teasers>
     </Columns>
 
-    <Banner>
-      Register by 30th September to be eligible for hosted housing. Any registrations after this date will
-      not be able to apply for hosted housing.
-    </Banner>
-
     <Welcome>
       <H2>We're back!</H2>
       <p>
